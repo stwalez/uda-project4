@@ -2,36 +2,32 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+This project operationalizes a Machine Learning Microservice API.
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+A pre-trained, `sklearn` model has been provided, it has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
+More information about this data can be found on Kaggle[the data source site](https://www.kaggle.com/c/boston-housing).
+This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
-### Project Tasks
+---
+## Project Tasks
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
+The following tasks were performed:
+* Test project code using linting
 * Complete a Dockerfile to containerize this application
 * Deploy your containerized application using Docker and make a prediction
 * Improve the log statements in the source code for this application
 * Configure Kubernetes and create a Kubernetes cluster
 * Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+* Upload a complete Github repo with CircleCI to indicate that the code has been tested
 
 ---
 
-## Setup the Environment
+## Instructions
+### Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
 python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
-python3 -m virtualenv --python=<path-to-Python3.7> .devops
 source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
@@ -49,4 +45,21 @@ source .devops/bin/activate
 * Create Flask app in Container
 * Run via kubectl
 
-### uda-project4
+
+---
+
+
+## Short description of folders and files in the repo
+
+* [.circleci](../uda-project4/.circleci): For the CircleCI build server
+* [model_data](../uda-project4model_data) : this folder contains the pretrained `sklearn` model and housing csv files
+* [output_txt_files](../uda-project4/output_txt_files): folder contains sample output logs from running `./run_docker.sh` and `./run_kubernetes.sh`
+* [app.py](../uda-project4/app.py) : contains the flask app
+* [Dockerfile](../uda-project4/app.py): contains instructions to containerize the application
+* [Makefile](../uda-project4/Makefile) : contains instructions for environment setup and lint tests
+* [requirements.txt](../uda-project4/requirements.txt): list of required dependencies
+* [run_docker.sh](../uda-project4/run_docker.sh): bash script to build Docker image and run the application in a Docker container
+* [upload_docker.sh](../uda-project4/upload_docker.sh): bash script to upload the built Docker image to Dockerhub
+* [run_kubernetes.sh](../uda-project4/run_kubernetes.sh): bash script to run the application in a Kubernetes cluster
+* [make_prediction.sh](../uda-project4/make_prediction.sh): bash script to make predictions against the Docker container and k8s cluster
+* [README.md](../uda-project4/README.md): this README file
