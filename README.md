@@ -51,7 +51,7 @@ source .devops/bin/activate
 
 ## Short description of folders and files in the repo
 
-* [.circleci](/.circleci): For the CircleCI build server
+* [.circleci](/.circleci): this contains instructions for the CircleCI build server
 * [model_data](/model_data/) : this folder contains the pretrained `sklearn` model and housing csv files
 * [output_txt_files](/output_txt_files): folder contains sample output logs from running `./run_docker.sh` and `./run_kubernetes.sh`
 * [app.py](/app.py) : contains the flask app
@@ -62,4 +62,4 @@ source .devops/bin/activate
 * [upload_docker.sh](/upload_docker.sh): bash script to upload the built Docker image to Dockerhub
 * [run_kubernetes.sh](/run_kubernetes.sh): bash script to run the application in a Kubernetes cluster
 * [make_prediction.sh](/make_prediction.sh): bash script to make predictions against the Docker container and k8s cluster
-* [README.md](/README.md): this README file
+* [README.md](/README.md): this points to this README file
