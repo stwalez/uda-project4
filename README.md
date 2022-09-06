@@ -51,15 +51,15 @@ source .devops/bin/activate
 
 ## Short description of folders and files in the repo
 
-* [.circleci](../uda-project4/.circleci): For the CircleCI build server
-* [model_data](../uda-project4model_data) : this folder contains the pretrained `sklearn` model and housing csv files
-* [output_txt_files](../uda-project4/output_txt_files): folder contains sample output logs from running `./run_docker.sh` and `./run_kubernetes.sh`
-* [app.py](../uda-project4/app.py) : contains the flask app
-* [Dockerfile](../uda-project4/app.py): contains instructions to containerize the application
-* [Makefile](../uda-project4/Makefile) : contains instructions for environment setup and lint tests
-* [requirements.txt](../uda-project4/requirements.txt): list of required dependencies
-* [run_docker.sh](../uda-project4/run_docker.sh): bash script to build Docker image and run the application in a Docker container
-* [upload_docker.sh](../uda-project4/upload_docker.sh): bash script to upload the built Docker image to Dockerhub
-* [run_kubernetes.sh](../uda-project4/run_kubernetes.sh): bash script to run the application in a Kubernetes cluster
-* [make_prediction.sh](../uda-project4/make_prediction.sh): bash script to make predictions against the Docker container and k8s cluster
-* [README.md](../uda-project4/README.md): this README file
+* [.circleci](/.circleci): For the CircleCI build server
+* [model_data](/model_data/) : this folder contains the pretrained `sklearn` model and housing csv files
+* [output_txt_files](/output_txt_files): folder contains sample output logs from running `./run_docker.sh` and `./run_kubernetes.sh`
+* [app.py](/app.py) : contains the flask app
+* [Dockerfile](/Dockerfile): contains instructions to containerize the application
+* [Makefile](/Makefile) : contains instructions for environment setup and lint tests
+* [requirements.txt](/requirements.txt): list of required dependencies
+* [run_docker.sh](/run_docker.sh): bash script to build Docker image and run the application in a Docker container
+* [upload_docker.sh](/upload_docker.sh): bash script to upload the built Docker image to Dockerhub
+* [run_kubernetes.sh](/run_kubernetes.sh): bash script to run the application in a Kubernetes cluster
+* [make_prediction.sh](/make_prediction.sh): bash script to make predictions against the Docker container and k8s cluster
+* [README.md](/README.md): this README file
